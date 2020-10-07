@@ -1,10 +1,6 @@
 <template>
-  <main class="container">
-    <div class="row">
-      <div class="col-sm-9 main">
+  <main class="container-fluid bg-light px-0">
         <router-view />
-      </div>
-    </div>
   </main>
 </template>
 
