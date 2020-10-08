@@ -2,21 +2,14 @@
   <div
     class="container-fluid px-0 bgimg-1 hero"
   >
-    <!-- <img
-      src="../assets/wallpaper2.jpg"
-      alt=".."
-      width="100%"
-    /> -->
     <div class="container">
       <div class="row">
-        <div class="hero-content">
-          <div class="col-md-12">
+          <div class="col-md-12 hero-content">
             <h2>Find the perfect laptop</h2>
             <p>Personalised recommendations because we're all different</p>
             <a href="/laptops/start" rel="nofollow" class="hero-btn"
               >Get started</a
             >
-          </div>
         </div>
       </div>
     </div>

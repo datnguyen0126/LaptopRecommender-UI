@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-transparent container">
+  <nav class="bg-transparent">
     <router-link to="/" exact>
       <div class="logo" v-on:click="stopQuiz">
         <img
