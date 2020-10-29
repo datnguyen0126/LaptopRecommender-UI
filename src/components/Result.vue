@@ -1,6 +1,6 @@
 <template>
     <div class="container text-dark main">
-        <h3>Congratulation, your score is 0/10</h3>
+        <h3>Here are products for you, enjoy</h3>
         <router-link to="/"><button class="btn btn-primary">Back to home</button></router-link>
     </div>
 </template>

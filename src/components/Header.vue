@@ -1,40 +1,23 @@
 <template>
-  <nav class="bg-transparent">
+  <nav>
     <router-link to="/" exact>
       <div class="logo" v-on:click="stopQuiz">
         <img
           class="logo"
           src="../assets/logo.png"
           alt="Girl in a jacket"
-          width="250"
-          height="70"
+          width="130"
+          height="50"
         />
       </div>
     </router-link>
     <div class="cart-link">
-      <router-link class="font-weight-bold text-nav mr-3" to="/about">Article</router-link>
-      <router-link class="font-weight-bold text-nav mr-3" to="/about">Categories</router-link>
-      <router-link class="font-weight-bold text-nav mr-3" to="/about">Brands</router-link>
-      <router-link class="font-weight-bold text-nav mr-3" to="/about">About us</router-link>
-      <span v-if="user.isConnected" class="dropdown show">
-          <img :src="user.picture"
-          height="40px">
-        <a
-          class="btn btn-info"
-          href="#"
-          role="button"
-          id="dropdownMenuLink"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >{{ user.name }}</a>
-      </span>
-      <router-link
-        v-else
-        class="btn btn-primary font-weight-bold text-light mr-3"
-        to="/login"
-        exact
-      >Login</router-link>
+      <router-link class="font-weight-bold text-light mr-3" to="/about">Find product</router-link>
+      <router-link class="font-weight-bold text-light mr-3" to="/about">News</router-link>
+      <router-link class="font-weight-bold text-light mr-3" to="/about">Brand</router-link>
+      <router-link class="font-weight-bold text-light mr-3" to="/about">Guide</router-link>
+      <router-link class="font-weight-bold text-light mr-3" to="/about">About us</router-link>
+      <router-link class="font-weight-bold text-light mr-3" to="/about">Feed Back</router-link>
     </div>
   </nav>
 </template>
@@ -59,10 +42,13 @@ export default {
 
 <style >
 nav {
+  box-shadow: 1px 0rem 14px 0px #eee;
+  width: 100%;
   padding: 24px;
-  height: 90px;
+  position: fixed;
+  height: 66px;
   color: white;
-  background-color: #d3cedb;
+  background-color: orange;
   z-index: 99;
 }
 
@@ -71,17 +57,6 @@ nav {
   position: relative;
   top: -7px;
 }
-
-.text-nav { 
-    font-weight: 300;
-    font-size: 16px;
-    display: inline-block;
-    padding-top: 18px;
-    padding-right: 30px;
-    font-family: 'Roboto';
-  color: #16b8d4!important;
-}
-
 
 .nav-link {
   display: inline;

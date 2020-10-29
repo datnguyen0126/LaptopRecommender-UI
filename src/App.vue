@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Header v-bind:user="user" v-on:logout="logout" />
-    <router-view />
+    <div class="containter">
+      <router-view />
+    </div>
     <Footer />
   </div>
 </template>

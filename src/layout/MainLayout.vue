@@ -1,10 +1,23 @@
 <template>
-  <main class="container-fluid bg-light px-0">
+  <main class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <Sidebar />
+      </div>
+      <div class="col-sm-9 main">
         <router-view />
+      </div>
+    </div>
   </main>
 </template>
 
 <script>
+import Sidebar from "../components/Sidebar";
+export default {
+  components: {
+    Sidebar,
+  },
+};
 </script>
 
 <style>

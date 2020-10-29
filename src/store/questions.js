@@ -9,7 +9,7 @@ const state = {
 };
 
 const actions = {
-  startQuiz(context) {
+  startAnswer(context) {
     return new Promise(function(resolve) {
       questionsApi.getQuestion((questions) => {
         context.commit("setQuestion", questions);
