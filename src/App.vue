@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" style="background: #f3f3f3">
     <Header v-bind:user="user" v-on:logout="logout" />
     <router-view />
     <Footer />

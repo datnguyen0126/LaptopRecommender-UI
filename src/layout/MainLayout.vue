@@ -1,5 +1,5 @@
 <template>
-  <main class="container-fluid bg-light px-0">
+  <main class="container-fluid px-0">
         <router-view />
   </main>
 </template>
