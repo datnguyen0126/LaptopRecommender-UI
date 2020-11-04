@@ -1,97 +1,123 @@
 const questions = [
     {
         id: 1,
-        contents: "How much are you going to spend?",
+        contents: "How many provices does Viet Nam have?",
         options: [
-            "Up to 5000000",
-            "Up to 10000000",
-            "Up to 15000000",
-            "Up to 20000000",
-            "Up to 25000000",
-            "Up to 30000000",
-            "Another range",
-            "Unlimited",
+            "62",
+            "63",
+            "64",
+            "65"
         ],
-        required: true,
-        mutiple: false,
+        level: "easy",
+        answer: "64"
     },
     {
         id: 2,
-        contents: "What will you mainly use your laptop for?",
+        contents: "How many days do we have in a week?",
         options: [
-            "Personal Use",
-            "Professional Use",
+            "3",
+            "4",
+            "5",
+            "7"
         ],
-        required: false,
-        mutiple: false,
+        level: "easy",        
+        answer: "64"
     },
     {
         id: 3,
-        contents: "Which of the following will you use frequently?",
+        contents: "How many days are there in a normal year?",
         options: [
-            "Web browsing",
-            "Social Media",
-            "Email",
-            "Document",
-            "Watching Movies",
-            "Light Gaming",
-            "Medium Gaming",
-            "Heavy Gaming",
-            "Light photo or Video Editing",
-            "Heavy photo or video Editing"
+            "62",
+            "63",
+            "64",
+            "65"
         ],
-        required: true,
-        mutiple: true,
+        level: "hard",
+        answer: "64"
     },
     {
         id: 4,
-        contents: "Where will you use your laptop?",
+        contents: "How many colors are there in a rainbow?",
         options: [
-            "All around the house",
-            "Public places",
-            "Long journeys",
-            "At your desk"
+            "4",
+            "7",
+            "9",
+            "10"
         ],
-        required: false,
-        mutiple: false,
+        level: "hard",
+        answer: "64"
     },
     {
         id: 5,
-        contents: "Are any of these important to you?",
+        contents: "Which animal is known as the 'Ship of the Desert?",
         options: [
-            "Using laptop as a tablet",
-            "Touchscreen laptop",
-            "Need to work continously for long time",
-            "Working in low light conditions",
-            "Fingerprint",
+            "62",
+            "63",
+            "64",
+            "65"
         ],
-        required: false,
-        mutiple: true,
+        level: "hard",
+        answer: "64"
     },
     {
         id: 6,
-        contents: "Is there a specific screen size you prefer?",
+        contents: "How many letters are there in the English alphabet?",
         options: [
-            "Very small",
-            "Small",
-            "Medium",
-            "Large",
-            "Any size"
+            "4",
+            "7",
+            "9",
+            "10"
         ],
-        required: true,
-        mutiple: true,
+        level: "hard",
+        answer: "64"
     },
     {
         id: 7,
-        contents: "Which operating system are you comfortable with?",
+        contents: "How many consonants are there in the English alphabet?",
         options: [
-            "Microsoft windows",
-            "Mac os",
-            "Linux",
-            "Any os"
+            "62",
+            "63",
+            "64",
+            "65"
         ],
-        required: true,
-        mutiple: true,
+        level: "hard",
+        answer: "64"
+    },
+    {
+        id: 8,
+        contents: "What do you call a house made of ice?",
+        options: [
+            "4",
+            "7",
+            "9",
+            "10"
+        ],
+        level: "hard",
+        answer: "64"
+    },
+    {
+        id: 9,
+        contents: "Which is the largest animal in the world?",
+        options: [
+            "62",
+            "63",
+            "64",
+            "65"
+        ],
+        level: "hard",
+        answer: "64"
+    },
+    {
+        id: 10,
+        contents: "Which is the tallest animal on the earth?",
+        options: [
+            "62",
+            "63",
+            "64",
+            "65"
+        ],
+        level: "hard",
+        answer: "64"
     },
 ]
 
