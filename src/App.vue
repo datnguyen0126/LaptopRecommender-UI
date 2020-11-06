@@ -1,13 +1,13 @@
 <template>
-  <div id="app" style="background: #f3f3f3">
-    <Header v-bind:user="user" v-on:logout="logout" />
+  <div id="app">
+    <Navbar v-bind:user="user" v-on:logout="logout" />
     <router-view />
     <Footer />
   </div>
 </template>
 
 <script>
-import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { mapState, mapActions } from "vuex";
 
@@ -15,7 +15,7 @@ export default {
   name: "App",
 
   components: {
-    Header,
+    Navbar,
     Footer,
   },
   computed: {
