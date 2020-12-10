@@ -1,44 +1,69 @@
 import questionsApi from "../api/questionsApi";
-import Vue from 'vue'
+//import axios from 'axios'
 
 const state = {
   questions: [],
   isDoing: false,
   currentTest: 1,
-  answer: {},
+  answers: [],
 };
 
 const actions = {
-  startQuiz(context) {
+  getQuestions(context) {
     return new Promise(function(resolve) {
       questionsApi.getQuestion((questions) => {
         context.commit("setQuestion", questions);
-        context.commit("setIsDoing", true);
         resolve();
       });
     });
   },
 
-  stopQuiz(context) {
-    context.commit("setIsDoing", false);
-    // Object.keys(state.answer).forEach(a => {
-
-    // })
+  resetQuestion(context) {
+    context.commit("resetQuestion")
   },
+
+  getAnswer() {
+    return state.answers
+  },
+  submitAnswer() {
+
+  }
 };
 
 const mutations = {
+  resetQuestion(state){
+    state.answers = []
+  },
+
+  setAnswer(state, payload) {
+    if (state.questions[payload.currentIndex].multiple === true) {
+      if (state.answers[payload.currentIndex] === undefined) {
+        state.answers[payload.currentIndex] = []
+      }
+      if (state.answers[payload.currentIndex].indexOf(payload.option) > -1) {
+        state.answers[payload.currentIndex] = state.answers[payload.currentIndex].filter(e => e !== payload.option);
+      } else {
+        state.answers[payload.currentIndex].push(payload.option)
+      }
+    } else {
+      if(state.answers[payload.currentIndex] === payload.option){
+        state.answers[payload.currentIndex] = ''
+      } else {
+        state.answers[payload.currentIndex] = payload.option
+      }
+    }
+    if (state.answers.length > 20) {
+      state.answers.splice(0, state.answers.length - 5)
+    } else {
+      state.answers.push([])
+    }
+  },
   setQuestion(state, questions) {
     state.questions = questions;
   },
 
-  setIsDoing(state, val) {
-    state.currentTest = val ? 1 : 0;
-    state.isDoing = val;
-  },
-
   UPDATE_ANSWER(state, payload) {
-    Vue.set(state.answer, payload.key, payload.value);
+    console.log(payload.key, payload.value)
   },
 };
 

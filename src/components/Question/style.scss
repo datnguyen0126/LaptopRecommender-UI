@@ -1,4 +1,12 @@
+.top-100 {
+    top: 100px;
+}
 
+.question-btn:hover {
+    background: #15b9d5!important;
+    box-shadow: 3px 3px 8px rgba(0,0,0,.1);
+    color: #fff!important;
+}
 
 .question-box {
     padding: 0 40px !important;
@@ -31,12 +39,6 @@ div {
 
 .budget-icon {
     display: block;
-}
-
-.question-btn:hover {
-    background: #fff!important;
-    box-shadow: 3px 3px 8px rgba(0,0,0,.1);
-    color: #15b9d5!important;
 }
 
 .chat-icon-container-first {
@@ -154,7 +156,6 @@ div {
 }
 #back-btn {
     position: absolute;
-    top: 50%;
     margin-top: 15px;
     left: 0;
     text-align: center;
@@ -173,7 +174,6 @@ div {
 
 #next-btn {
     position: absolute;
-    top: 50%;
     margin-top: 15px;
     right: 0;
     text-align: center;
@@ -187,4 +187,11 @@ div {
 .next-btn-text {
     display: block;
     color: #15b9d5!important;
+}
+
+.multi-txt-p {
+    font-size: 16px;
+    color: #f1671c!important;
+    position: relative;
+    top: -18px;
 }

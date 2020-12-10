@@ -6,6 +6,9 @@ body, html {
     color: #777;
   }
 
+  body {
+    font-family: roboto,sans-serif;
+}
 .owl-carousel .animated {
   -webkit-animation-duration: 1000ms;
   animation-duration: 1000ms;
