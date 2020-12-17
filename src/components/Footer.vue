@@ -5,7 +5,8 @@
         <div class="col-md-12 text-center">
           <div v-if="this.$route.path.includes('start')" class="number-wrap">
             <p>
-              <span id="match-num">More than 500 </span>
+              <span id="match-num" v-if="answers.length == 0">More than 1000</span>
+              <span id="match-num1" v-else>{{number}}</span>
               <span id="pText">Products</span>
               Available
               <span style="font-size: 15px;padding-top: 6px; text-transform: none;">Price Range:
@@ -14,7 +15,7 @@
             </p>
             <div v-if="isSubmitable()" id="skipToResults">
               <a href="#" class="hero-btn skip-btn">
-                <span v-on:click="getResultLaptops(answers)">Go to results</span>
+                <span v-on:click="getResultLaptops({data: answers})">Go to results</span>
               </a>
             </div>
           </div>
@@ -37,7 +38,8 @@ export default {
   },
   computed: {
     ...mapState({
-      answers: (state) => state.questions.answers
+      answers: (state) => state.questions.answers,
+      number: (state) => state.laptops.number
     }),
   },
   methods: {
@@ -101,6 +103,11 @@ footer {
 }
 
 .number-wrap p #match-num {
+  font-size: 24px;
+  display: inline-block;
+}
+
+.number-wrap p #match-num1 {
   font-size: 24px;
   display: inline-block;
 }

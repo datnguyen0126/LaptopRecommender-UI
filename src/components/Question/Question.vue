@@ -109,6 +109,7 @@ export default {
     },
     addAnswer(option) {
       this.$store.commit("setAnswer", { option: option, currentIndex: this.currentIndex });
+      this.countResultLaptops({data:this.answers})
       // if (this.questions[this.currentIndex].multiple === true) {
       //   if (this.answers[this.currentIndex] === undefined) {
       //     this.answers[this.currentIndex] = []
@@ -132,6 +133,7 @@ export default {
     },
     ...mapActions({
       getQuestions: 'getQuestions',
+      countResultLaptops: 'countResultLaptops',
     }),
   },
   filters: {

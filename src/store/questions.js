@@ -1,5 +1,7 @@
-import questionsApi from "../api/questionsApi";
-//import axios from 'axios'
+import axios from "axios";
+import { API_HOST } from "@/store/env";
+
+const question_url = API_HOST + 'question/'
 
 const state = {
   questions: [],
@@ -10,12 +12,9 @@ const state = {
 
 const actions = {
   getQuestions(context) {
-    return new Promise(function(resolve) {
-      questionsApi.getQuestion((questions) => {
-        context.commit("setQuestion", questions);
-        resolve();
-      });
-    });
+    return axios.get(question_url).then(data => {
+      context.commit("setQuestion", data.data);
+    })
   },
 
   resetQuestion(context) {
@@ -52,8 +51,8 @@ const mutations = {
         state.answers[payload.currentIndex] = payload.option
       }
     }
-    if (state.answers.length > 20) {
-      state.answers.splice(0, state.answers.length - 5)
+    if (state.answers.length > questions.length + 1) {
+      state.answers.splice(0, state.answers.length - 1)
     } else {
       state.answers.push([])
     }

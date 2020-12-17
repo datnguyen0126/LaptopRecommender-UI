@@ -2,6 +2,9 @@ import Vue from 'vue'
 import App from './App.vue';
 import Toast from 'vue-toast-notification'
 import 'vue-toast-notification/dist/theme-sugar.css'
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+import 'jquery/dist/jquery.min.js';
 
 Vue.use(Toast);
 
